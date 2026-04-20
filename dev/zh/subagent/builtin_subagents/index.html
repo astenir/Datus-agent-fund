@@ -3694,14 +3694,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/bi_tools/" class="md-nav__link">
+      <a href="../../configuration/bi_platforms/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BI 工具
+    BI 平台
   
 
     
@@ -5822,7 +5822,7 @@
 </span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="nt">gen_dashboard</span><span class="p">:</span>
 </span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claude</span><span class="w">     </span><span class="c1"># 可选：默认使用已配置的模型</span>
 </span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">      </span><span class="nt">max_turns</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w">     </span><span class="c1"># 可选：默认为 30</span>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">      </span><span class="nt">bi_platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span><span class="w">  </span><span class="c1"># 可选：显式指定平台（仅配置一个 BI 工具时可自动检测）</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">      </span><span class="nt">bi_platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span><span class="w">  </span><span class="c1"># 可选：显式指定平台（仅配置一个 BI 平台时可自动检测）</span>
 </span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
 </span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">    </span><span class="nt">scheduler</span><span class="p">:</span>
 </span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claude</span><span class="w">     </span><span class="c1"># 可选：默认使用已配置的模型</span>
@@ -6661,7 +6661,7 @@
 <p>gen_dashboard subagent 在 Superset 和 Grafana 上创建、更新和管理 BI 仪表盘。它由聊天 agent 通过 <code>task(type="gen_dashboard")</code> 调用，使用 <code>BIFuncTool</code> 中的 BI 工具，通过 LLM function calling 驱动完整的仪表盘创建工作流。</p>
 <h3 id="_63">关键特性<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>多平台支持</strong>：支持 Apache Superset 和 Grafana；平台可通过 <code>bi_platform</code> 显式指定，或从 <code>agent.services.bi_tools</code> 自动检测</li>
+<li><strong>多平台支持</strong>：支持 Apache Superset 和 Grafana；平台可通过 <code>bi_platform</code> 显式指定，或从 <code>agent.services.bi_platforms</code> 自动检测</li>
 <li><strong>动态工具暴露</strong>：工具根据 adapter Mixin 能力动态暴露——只有平台实际支持的操作才作为 LLM 工具出现</li>
 <li><strong>数据物化桥接</strong>：<code>write_query</code> 将源数据库查询结果写入 BI 平台自有数据库，解耦源数据与可视化层</li>
 <li><strong>Skill 引导工作流</strong>：内置 <code>gen-dashboard</code> skill 为各平台提供分步工作流指导</li>
@@ -6669,7 +6669,7 @@
 <h3 id="_64">配置<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h3>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nt">agent</span><span class="p">:</span>
 </span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">  </span><span class="nt">services</span><span class="p">:</span>
-</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="nt">bi_tools</span><span class="p">:</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="nt">bi_platforms</span><span class="p">:</span>
 </span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">      </span><span class="nt">superset</span><span class="p">:</span>
 </span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span>
 </span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">        </span><span class="nt">api_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:8088&quot;</span>
@@ -6683,10 +6683,10 @@
 </span><span id="__span-40-14"><a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a><span class="w">    </span><span class="nt">gen_dashboard</span><span class="p">:</span>
 </span><span id="__span-40-15"><a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a><span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claude</span><span class="w">           </span><span class="c1"># 可选：默认使用已配置的模型</span>
 </span><span id="__span-40-16"><a id="__codelineno-40-16" name="__codelineno-40-16" href="#__codelineno-40-16"></a><span class="w">      </span><span class="nt">max_turns</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w">           </span><span class="c1"># 可选：默认为 30</span>
-</span><span id="__span-40-17"><a id="__codelineno-40-17" name="__codelineno-40-17" href="#__codelineno-40-17"></a><span class="w">      </span><span class="nt">bi_platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span><span class="w">   </span><span class="c1"># 可选：只配置一个 BI 工具时可自动检测</span>
+</span><span id="__span-40-17"><a id="__codelineno-40-17" name="__codelineno-40-17" href="#__codelineno-40-17"></a><span class="w">      </span><span class="nt">bi_platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span><span class="w">   </span><span class="c1"># 可选：只配置一个 BI 平台时可自动检测</span>
 </span></code></pre></div>
 <p><strong>前置条件</strong>：
-- <code>agent.yml</code> 中包含 <code>agent.services.bi_tools</code> 配置段及平台凭据
+- <code>agent.yml</code> 中包含 <code>agent.services.bi_platforms</code> 配置段及平台凭据
 - 已安装 <code>datus-bi-superset</code> 或 <code>datus-bi-grafana</code> 包</p>
 <h3 id="_65">工作原理<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
