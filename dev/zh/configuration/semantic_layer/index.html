@@ -3578,6 +3578,7 @@
 
 <h1 id="semantic-layer">语义层配置（Semantic Layer）<a class="headerlink" href="#semantic-layer" title="Permanent link">&para;</a></h1>
 <p>语义适配器统一配置在 <code>agent.services.semantic_layer</code> 下。</p>
+<p>如果你使用的是 MetricFlow 的默认配置，整个 <code>semantic_layer</code> 段可以省略；Datus 会默认使用 <code>metricflow</code>。</p>
 <h2 id="_1">配置结构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">agent</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">services</span><span class="p">:</span>
@@ -3598,6 +3599,7 @@
 <li><code>services.semantic_layer</code> 下的 key <strong>必须等于 adapter type</strong>（例如 <code>metricflow</code>）。如果同时写了 <code>type:</code> 字段，其值必须与 key 一致，否则 Datus 会在启动时抛出配置错误。比较时会先对 key 与 <code>type</code> 做 lowercase + trim 处理，因此 <code>MetricFlow</code> 或 <code>metricflow</code> 也会被视为与 <code>metricflow</code> 匹配。</li>
 <li>语义相关节点通过 <code>semantic_adapter</code> 选择适配器。</li>
 <li>语义适配器不支持 <code>default: true</code>。</li>
+<li>如果 <code>services.semantic_layer</code> 和 <code>semantic_adapter</code> 都省略，Datus 会默认使用 <code>metricflow</code>。</li>
 <li>如果只配置了一个 semantic layer，省略 <code>semantic_adapter</code> 时会自动使用它。</li>
 <li>如果配置了多个 semantic layer，则必须显式填写 <code>semantic_adapter</code>。</li>
 </ul>
