@@ -4267,7 +4267,7 @@ By default, Datus points MetricFlow at the current project's semantic model dire
 - <code>project_root</code> is the active Datus project root.</p>
 <h3 id="selection-rules">Selection Rules<a class="headerlink" href="#selection-rules" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The key under <code>services.semantic_layer</code> is the adapter type, for example <code>metricflow</code>.</li>
+<li>The key under <code>services.semantic_layer</code> <strong>must equal the adapter type</strong> (for example <code>metricflow</code>). If a <code>type:</code> field is present, it must match the key; otherwise Datus raises a configuration error at startup. Comparison is case-insensitive and trims surrounding whitespace, so <code>MetricFlow</code> and <code>metricflow</code> also match.</li>
 <li>Semantic nodes choose the adapter with <code>semantic_adapter</code>.</li>
 <li>If <code>semantic_adapter</code> is omitted and only one semantic layer is configured, Datus uses that adapter automatically.</li>
 <li>If multiple semantic layers are configured, set <code>semantic_adapter</code> explicitly.</li>
