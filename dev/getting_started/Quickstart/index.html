@@ -1672,7 +1672,7 @@
   <span class="md-ellipsis">
     
   
-    IM Gateway (Claw)
+    IM Gateway
   
 
     
@@ -1688,7 +1688,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    IM Gateway (Claw)
+    IM Gateway
   
 
           </label>
@@ -1701,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../claw/introduction/" class="md-nav__link">
+      <a href="../../gateway/introduction/" class="md-nav__link">
         
   
   
@@ -1729,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../claw/slack/" class="md-nav__link">
+      <a href="../../gateway/slack/" class="md-nav__link">
         
   
   
@@ -1757,7 +1757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../claw/feishu/" class="md-nav__link">
+      <a href="../../gateway/feishu/" class="md-nav__link">
         
   
   
@@ -3880,7 +3880,7 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># or pin to a specific ref</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/datus-ai/datus-agent/main/install-dev.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nv">DATUS_REF</span><span class="o">=</span>feature/foo<span class="w"> </span>sh
 </span></code></pre></div>
-<p>Both scripts bootstrap <code>uv</code>, create a dedicated venv at <code>~/.datus/venv</code> (Python 3.12 is downloaded automatically if missing), and write <code>datus</code>, <code>datus-cli</code>, <code>datus-api</code>, <code>datus-mcp</code>, <code>datus-agent</code>, <code>datus-claw</code>, and <code>datus-pip</code> shims into <code>~/.local/bin</code>. Open a new shell (or <code>source ~/.zshrc</code>) so the new PATH takes effect.</p>
+<p>Both scripts bootstrap <code>uv</code>, create a dedicated venv at <code>~/.datus/venv</code> (Python 3.12 is downloaded automatically if missing), and write <code>datus</code>, <code>datus-cli</code>, <code>datus-api</code>, <code>datus-mcp</code>, <code>datus-agent</code>, <code>datus-gateway</code>, and <code>datus-pip</code> shims into <code>~/.local/bin</code>. Open a new shell (or <code>source ~/.zshrc</code>) so the new PATH takes effect.</p>
 <p>To install additional Python packages into the global venv later, use:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>datus-pip<span class="w"> </span>install<span class="w"> </span>&lt;package&gt;
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># equivalent to ~/.datus/venv/bin/pip install &lt;package&gt;</span>

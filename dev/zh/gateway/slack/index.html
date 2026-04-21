@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://docs.datus.ai/dev/claw/introduction/">
+        <link rel="canonical" href="https://docs.datus.ai/dev/zh/gateway/slack/">
       
       
-        <link rel="prev" href="../../web_chatbot/introduction/">
+        <link rel="prev" href="../introduction/">
       
       
-        <link rel="next" href="../slack/">
+        <link rel="next" href="../feishu/">
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="../../../gateway/slack/" hreflang="en">
         
-          <link rel="alternate" href="../../zh/claw/introduction/" hreflang="zh">
+          <link rel="alternate" href="./" hreflang="zh">
         
       
       
-      <link rel="icon" href="../../assets/logo-light.png">
+      <link rel="icon" href="../../../assets/logo-light.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Introduction - Datus Docs</title>
+        <title>Slack - Datus Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,9 +49,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,8 +86,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#im-gateway-claw" class="md-skip">
-          Skip to content
+        <a href="#slack" class="md-skip">
+          跳转至
         </a>
       
     </div>
@@ -103,10 +103,10 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Datus Docs" class="md-header__button md-logo" aria-label="Datus Docs" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../" title="Datus Docs" class="md-header__button md-logo" aria-label="Datus Docs" data-md-component="logo">
       
-  <img src="../../assets/logo-light.png" alt="logo">
+  <img src="../../../assets/logo-light.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Slack
             
           </span>
         </div>
@@ -173,20 +173,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../../gateway/slack/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../zh/claw/introduction/" hreflang="zh" class="md-select__link">
+            <a href="./" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
@@ -207,16 +207,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -227,7 +227,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -239,7 +239,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/Datus-ai/Datus-agent" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/Datus-ai/Datus-agent" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -260,7 +260,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -274,13 +274,13 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
     
   
-  Home
+  首页
 
         </a>
       </li>
@@ -300,7 +300,7 @@
   
     
   
-  Release Notes
+  发布说明
 
       </a>
     </li>
@@ -327,18 +327,18 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Datus Docs" class="md-nav__button md-logo" aria-label="Datus Docs" data-md-component="logo">
+    <a href="../../" title="Datus Docs" class="md-nav__button md-logo" aria-label="Datus Docs" data-md-component="logo">
       
-  <img src="../../assets/logo-light.png" alt="logo">
+  <img src="../../../assets/logo-light.png" alt="logo">
 
     </a>
     Datus Docs
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Datus-ai/Datus-agent" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/Datus-ai/Datus-agent" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -414,14 +414,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Home
+    首页
   
 
     
@@ -443,7 +443,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Home
+    首页
   
 
           </label>
@@ -491,7 +491,7 @@
   <span class="md-ellipsis">
     
   
-    Getting Started
+    入门指南
   
 
     
@@ -507,7 +507,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Getting Started
+    入门指南
   
 
           </label>
@@ -527,7 +527,7 @@
   <span class="md-ellipsis">
     
   
-    Quickstart
+    快速开始
   
 
     
@@ -555,7 +555,7 @@
   <span class="md-ellipsis">
     
   
-    Data Engineering Quickstart
+    数据工程快速开始
   
 
     
@@ -583,7 +583,7 @@
   <span class="md-ellipsis">
     
   
-    Contextual Data Engineering
+    上下文数据工程
   
 
     
@@ -611,7 +611,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    教程
   
 
     
@@ -709,7 +709,7 @@
   <span class="md-ellipsis">
     
   
-    CLI
+    命令行
   
 
     
@@ -725,7 +725,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    CLI
+    命令行
   
 
           </label>
@@ -745,7 +745,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    介绍
   
 
     
@@ -773,7 +773,7 @@
   <span class="md-ellipsis">
     
   
-    Chat Command
+    聊天命令
   
 
     
@@ -801,7 +801,7 @@
   <span class="md-ellipsis">
     
   
-    Context Command
+    上下文命令
   
 
     
@@ -829,7 +829,7 @@
   <span class="md-ellipsis">
     
   
-    Execution Command
+    执行命令
   
 
     
@@ -857,7 +857,7 @@
   <span class="md-ellipsis">
     
   
-    MCP Extensions
+    MCP 扩展
   
 
     
@@ -885,7 +885,7 @@
   <span class="md-ellipsis">
     
   
-    SQL Execution
+    SQL 执行
   
 
     
@@ -913,7 +913,7 @@
   <span class="md-ellipsis">
     
   
-    Skill Command
+    技能命令
   
 
     
@@ -941,7 +941,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    参考
   
 
     
@@ -969,7 +969,7 @@
   <span class="md-ellipsis">
     
   
-    Plan Mode
+    计划模式
   
 
     
@@ -1079,7 +1079,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    介绍
   
 
     
@@ -1107,7 +1107,7 @@
   <span class="md-ellipsis">
     
   
-    Built-in subagents
+    内置 subagent
   
 
     
@@ -1135,7 +1135,7 @@
   <span class="md-ellipsis">
     
   
-    Customized subagents
+    自定义 subagent
   
 
     
@@ -1163,7 +1163,7 @@
   <span class="md-ellipsis">
     
   
-    Generate Dashboard
+    生成 Dashboard
   
 
     
@@ -1191,7 +1191,7 @@
   <span class="md-ellipsis">
     
   
-    Generate Metrics
+    生成指标
   
 
     
@@ -1219,7 +1219,7 @@
   <span class="md-ellipsis">
     
   
-    Generate Semantic Model
+    生成语义模型
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Scheduler
+    调度器
   
 
     
@@ -1395,7 +1395,7 @@
   <span class="md-ellipsis">
     
   
-    Chatbot
+    chatbot
   
 
     
@@ -1447,7 +1447,7 @@
   <span class="md-ellipsis">
     
   
-    IM Gateway (Claw)
+    IM 网关
   
 
     
@@ -1463,11 +1463,39 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    IM Gateway (Claw)
+    IM 网关
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1492,7 +1520,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    Slack
   
 
     
@@ -1510,7 +1538,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    Slack
   
 
     
@@ -1522,7 +1550,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -1531,15 +1559,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-design-principles" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Design Principles
+        前置条件
       
     </span>
   </a>
@@ -1547,10 +1575,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-platforms" class="md-nav__link">
+  <a href="#1-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Supported Platforms
+        步骤 1：安装 SDK
       
     </span>
   </a>
@@ -1558,10 +1586,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#2-slack-app-manifest" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture
+        步骤 2：创建 Slack App（使用 Manifest）
       
     </span>
   </a>
@@ -1569,33 +1597,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        步骤 3：生成令牌
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration">
+    <nav class="md-nav" aria-label="步骤 3：生成令牌">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general-structure" class="md-nav__link">
+  <a href="#app-level-token-socket-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        General Structure
+        App-Level Token（用于 Socket Mode）
       
     </span>
   </a>
@@ -1603,21 +1620,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#slack" class="md-nav__link">
+  <a href="#bot-token" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Slack
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feishu-lark" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Feishu (Lark)
+        Bot Token（用于发送消息）
       
     </span>
   </a>
@@ -1630,10 +1636,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#platform-setup-guides" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Platform Setup Guides
+        步骤 4：邀请机器人到频道
       
     </span>
   </a>
@@ -1641,22 +1647,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-gateway" class="md-nav__link">
+  <a href="#5-datus-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running the Gateway
+        步骤 5：配置 Datus Agent
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Running the Gateway">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置参考
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证连接
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        权限与事件清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="权限与事件清单">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#foreground-default" class="md-nav__link">
+  <a href="#bot-token_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Foreground (default)
+        必需的 Bot Token 权限
       
     </span>
   </a>
@@ -1664,21 +1703,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#daemon-background-mode" class="md-nav__link">
+  <a href="#bot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Daemon (background) Mode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cli-flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CLI Flags
+        必需的 Bot 事件
       
     </span>
   </a>
@@ -1691,22 +1719,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features
+        故障排查
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Features">
+    <nav class="md-nav" aria-label="故障排查">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#real-time-streaming" class="md-nav__link">
+  <a href="#invalid_auth" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Real-Time Streaming
+        "invalid_auth" 错误
       
     </span>
   </a>
@@ -1714,22 +1742,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#chat-commands" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Chat Commands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Chat Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#help" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        /help
+        机器人连接成功但收不到消息
       
     </span>
   </a>
@@ -1737,10 +1753,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#new-reset-clear" class="md-nav__link">
+  <a href="#missing_scope" class="md-nav__link">
     <span class="md-ellipsis">
       
-        /new / /reset / /clear
+        "missing_scope" 错误
       
     </span>
   </a>
@@ -1748,10 +1764,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#verbose-level" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        /verbose [level]
+        机器人消息触发循环
       
     </span>
   </a>
@@ -1760,116 +1776,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#session-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Session Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#namespace-override" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Namespace Override
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subagent-routing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subagent Routing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sdk-not-installed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SDK Not Installed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid-credentials" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Invalid Credentials
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bot-not-receiving-messages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bot Not Receiving Messages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debug-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Debug Logging
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next Steps
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1889,34 +1795,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../slack/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Slack
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../feishu/" class="md-nav__link">
         
   
@@ -1924,7 +1802,7 @@
   <span class="md-ellipsis">
     
   
-    Feishu
+    飞书
   
 
     
@@ -1992,7 +1870,7 @@
   <span class="md-ellipsis">
     
   
-    Knowledge Base
+    知识库
   
 
     
@@ -2008,7 +1886,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Knowledge Base
+    知识库
   
 
           </label>
@@ -2028,7 +1906,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    介绍
   
 
     
@@ -2056,7 +1934,7 @@
   <span class="md-ellipsis">
     
   
-    External Knowledge
+    外部知识
   
 
     
@@ -2084,7 +1962,7 @@
   <span class="md-ellipsis">
     
   
-    Platform Documentation
+    平台文档
   
 
     
@@ -2112,7 +1990,7 @@
   <span class="md-ellipsis">
     
   
-    Metadata
+    元数据
   
 
     
@@ -2140,7 +2018,7 @@
   <span class="md-ellipsis">
     
   
-    Semantic Models
+    语义模型
   
 
     
@@ -2168,7 +2046,7 @@
   <span class="md-ellipsis">
     
   
-    Metrics
+    指标
   
 
     
@@ -2224,7 +2102,7 @@
   <span class="md-ellipsis">
     
   
-    Reference Template
+    SQL模板
   
 
     
@@ -2284,7 +2162,7 @@
   <span class="md-ellipsis">
     
   
-    Workflow
+    工作流
   
 
     
@@ -2300,7 +2178,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Workflow
+    工作流
   
 
           </label>
@@ -2320,7 +2198,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    介绍
   
 
     
@@ -2348,7 +2226,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    节点
   
 
     
@@ -2376,7 +2254,7 @@
   <span class="md-ellipsis">
     
   
-    Orchestration
+    编排
   
 
     
@@ -2500,7 +2378,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    介绍
   
 
     
@@ -2528,7 +2406,7 @@
   <span class="md-ellipsis">
     
   
-    Deployment
+    部署
   
 
     
@@ -2584,7 +2462,7 @@
   <span class="md-ellipsis">
     
   
-    Knowledge Base API
+    知识库 API
   
 
     
@@ -2650,7 +2528,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration
+    配置
   
 
     
@@ -2666,7 +2544,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Configuration
+    配置
   
 
           </label>
@@ -2686,7 +2564,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    介绍
   
 
     
@@ -2742,7 +2620,7 @@
   <span class="md-ellipsis">
     
   
-    Workflow
+    工作流
   
 
     
@@ -2770,7 +2648,7 @@
   <span class="md-ellipsis">
     
   
-    Benchmark
+    基准测试
   
 
     
@@ -2822,7 +2700,7 @@
   <span class="md-ellipsis">
     
   
-    Services
+    服务
   
 
     
@@ -2838,7 +2716,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Services
+    服务
   
 
           </label>
@@ -2858,7 +2736,7 @@
   <span class="md-ellipsis">
     
   
-    Databases
+    数据库
   
 
     
@@ -2886,7 +2764,7 @@
   <span class="md-ellipsis">
     
   
-    Semantic Layer
+    语义层
   
 
     
@@ -2914,7 +2792,7 @@
   <span class="md-ellipsis">
     
   
-    BI Platforms
+    BI 平台
   
 
     
@@ -2942,7 +2820,7 @@
   <span class="md-ellipsis">
     
   
-    Schedulers
+    调度器
   
 
     
@@ -3006,7 +2884,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    节点
   
 
     
@@ -3066,7 +2944,7 @@
   <span class="md-ellipsis">
     
   
-    Adapters
+    适配器
   
 
     
@@ -3082,7 +2960,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Adapters
+    适配器
   
 
           </label>
@@ -3102,7 +2980,7 @@
   <span class="md-ellipsis">
     
   
-    Database Adapters
+    数据库适配器
   
 
     
@@ -3130,7 +3008,7 @@
   <span class="md-ellipsis">
     
   
-    Semantic Adapters
+    语义层适配器
   
 
     
@@ -3158,7 +3036,7 @@
   <span class="md-ellipsis">
     
   
-    BI Adapters
+    BI 适配器
   
 
     
@@ -3186,7 +3064,7 @@
   <span class="md-ellipsis">
     
   
-    Scheduler Adapters
+    Scheduler 适配器
   
 
     
@@ -3240,7 +3118,7 @@
   <span class="md-ellipsis">
     
   
-    Benchmark
+    基准测试
   
 
     
@@ -3256,7 +3134,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Benchmark
+    基准测试
   
 
           </label>
@@ -3276,7 +3154,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    介绍
   
 
     
@@ -3330,7 +3208,7 @@
   <span class="md-ellipsis">
     
   
-    Metricflow
+    MetricFlow
   
 
     
@@ -3346,7 +3224,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Metricflow
+    MetricFlow
   
 
           </label>
@@ -3366,7 +3244,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    介绍
   
 
     
@@ -3424,7 +3302,7 @@
   <span class="md-ellipsis">
     
   
-    Integration
+    集成
   
 
     
@@ -3440,7 +3318,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Integration
+    集成
   
 
           </label>
@@ -3516,7 +3394,7 @@
   <span class="md-ellipsis">
     
   
-    Auto Memory
+    自动记忆
   
 
     
@@ -3782,7 +3660,7 @@
   <span class="md-ellipsis">
     
   
-    Release Notes
+    发布说明
   
 
     
@@ -3808,7 +3686,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -3817,15 +3695,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-design-principles" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Design Principles
+        前置条件
       
     </span>
   </a>
@@ -3833,10 +3711,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-platforms" class="md-nav__link">
+  <a href="#1-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Supported Platforms
+        步骤 1：安装 SDK
       
     </span>
   </a>
@@ -3844,10 +3722,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#2-slack-app-manifest" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture
+        步骤 2：创建 Slack App（使用 Manifest）
       
     </span>
   </a>
@@ -3855,33 +3733,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        步骤 3：生成令牌
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration">
+    <nav class="md-nav" aria-label="步骤 3：生成令牌">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general-structure" class="md-nav__link">
+  <a href="#app-level-token-socket-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        General Structure
+        App-Level Token（用于 Socket Mode）
       
     </span>
   </a>
@@ -3889,21 +3756,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#slack" class="md-nav__link">
+  <a href="#bot-token" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Slack
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feishu-lark" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Feishu (Lark)
+        Bot Token（用于发送消息）
       
     </span>
   </a>
@@ -3916,10 +3772,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#platform-setup-guides" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Platform Setup Guides
+        步骤 4：邀请机器人到频道
       
     </span>
   </a>
@@ -3927,22 +3783,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-gateway" class="md-nav__link">
+  <a href="#5-datus-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running the Gateway
+        步骤 5：配置 Datus Agent
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Running the Gateway">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置参考
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证连接
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        权限与事件清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="权限与事件清单">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#foreground-default" class="md-nav__link">
+  <a href="#bot-token_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Foreground (default)
+        必需的 Bot Token 权限
       
     </span>
   </a>
@@ -3950,21 +3839,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#daemon-background-mode" class="md-nav__link">
+  <a href="#bot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Daemon (background) Mode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cli-flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CLI Flags
+        必需的 Bot 事件
       
     </span>
   </a>
@@ -3977,22 +3855,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features
+        故障排查
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Features">
+    <nav class="md-nav" aria-label="故障排查">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#real-time-streaming" class="md-nav__link">
+  <a href="#invalid_auth" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Real-Time Streaming
+        "invalid_auth" 错误
       
     </span>
   </a>
@@ -4000,22 +3878,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#chat-commands" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Chat Commands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Chat Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#help" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        /help
+        机器人连接成功但收不到消息
       
     </span>
   </a>
@@ -4023,10 +3889,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#new-reset-clear" class="md-nav__link">
+  <a href="#missing_scope" class="md-nav__link">
     <span class="md-ellipsis">
       
-        /new / /reset / /clear
+        "missing_scope" 错误
       
     </span>
   </a>
@@ -4034,10 +3900,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#verbose-level" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        /verbose [level]
+        机器人消息触发循环
       
     </span>
   </a>
@@ -4046,116 +3912,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#session-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Session Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#namespace-override" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Namespace Override
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subagent-routing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subagent Routing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sdk-not-installed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SDK Not Installed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid-credentials" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Invalid Credentials
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bot-not-receiving-messages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bot Not Receiving Messages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debug-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Debug Logging
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next Steps
-      
-    </span>
-  </a>
   
 </li>
       
@@ -4176,7 +3932,7 @@
 
 
   
-    <a href="https://github.com/Datus-ai/Datus-agent/edit/main/docs/claw/introduction.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Datus-ai/Datus-agent/edit/main/docs/gateway/slack.zh.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4184,361 +3940,279 @@
   
 
 
-<h1 id="im-gateway-claw">IM Gateway (Claw)<a class="headerlink" href="#im-gateway-claw" title="Permanent link">&para;</a></h1>
-<p>Claw is the IM (Instant Messaging) gateway module for Datus Agent. It connects Datus to chat platforms such as Slack and Feishu (Lark), enabling users to interact with the data analysis agent directly from their team communication tools.</p>
-<h2 id="key-design-principles">Key Design Principles<a class="headerlink" href="#key-design-principles" title="Permanent link">&para;</a></h2>
+<h1 id="slack">Slack 适配器<a class="headerlink" href="#slack" title="Permanent link">&para;</a></h1>
+<p>本指南将引导你完成 Slack 机器人的配置，通过 Datus Gateway IM 网关连接到 Datus Agent。Slack 使用 <strong>Socket Mode</strong>，从服务器建立出站 WebSocket 连接 —— 无需公网 URL 或 Webhook 端点。</p>
+<h2 id="_1">前置条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Outbound long connections only</strong> — Claw actively connects to each IM platform using WebSocket, Socket Mode, or Stream SDK. No webhook endpoint or public URL is needed.</li>
-<li><strong>Real-time streaming</strong> — Agent responses (thinking, tool calls, SQL, markdown) are streamed back to the chat as they are generated.</li>
-<li><strong>Session management</strong> — Each conversation (group/DM/thread) automatically gets a persistent session. Users can reset it with <code>/new</code> or <code>/reset</code>.</li>
-<li><strong>Namespace &amp; subagent routing</strong> — Each channel can override the default namespace or route messages to a specific sub-agent.</li>
+<li>你有权限安装应用的 Slack 工作区</li>
+<li>已安装并配置好 Datus Agent</li>
 </ul>
-<h2 id="supported-platforms">Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Platform</th>
-<th>Adapter</th>
-<th>SDK</th>
-<th>Connection Type</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Slack</td>
-<td><code>slack</code></td>
-<td><code>slack-sdk[socket_mode]</code></td>
-<td>Socket Mode (WebSocket)</td>
-<td>Ready</td>
-</tr>
-<tr>
-<td>Feishu (Lark)</td>
-<td><code>feishu</code></td>
-<td><code>lark-oapi</code></td>
-<td>WebSocket long connection</td>
-<td>Ready</td>
-</tr>
-</tbody>
-</table>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌──────────────┐     long connection     ┌──────────────────┐
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│  IM Platform │ ◄──────────────────────► │  ChannelAdapter   │
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  (Slack /    │                          │  (per platform)   │
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   Feishu)    │                          └────────┬─────────┘
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│              │                                   │
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>└──────────────┘                                   │ InboundMessage
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                                                   ▼
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                                          ┌──────────────────┐
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                                          │  ChannelBridge    │
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                                          │  - session mgmt   │
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                                          │  - chat commands   │
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                                          └────────┬─────────┘
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                                                   │ StreamChatInput
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                                                   ▼
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                                          ┌──────────────────┐
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                                          │ ChatTaskManager   │
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                                          │  (agentic loop)   │
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                                          └────────┬─────────┘
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                                                   │ SSE events
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                                                   ▼
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>                                          ┌──────────────────┐
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>                                          │  OutboundMessage  │
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                                          │  → adapter.send() │
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                                          └──────────────────┘
+<h2 id="1-sdk">步骤 1：安装 SDK<a class="headerlink" href="#1-sdk" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;slack-sdk[socket_mode]&quot;</span>
 </span></code></pre></div>
-<p>Each adapter maintains a persistent connection to its platform. When a message arrives, the <code>ChannelBridge</code> converts it into a <code>StreamChatInput</code>, feeds it to <code>ChatTaskManager</code>, and streams each SSE event back to the user as an <code>OutboundMessage</code>.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>Install the SDK for each platform you want to connect:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Slack</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;slack-sdk[socket_mode]&quot;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Feishu (Lark)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>pip<span class="w"> </span>install<span class="w"> </span>lark-oapi
+<h2 id="2-slack-app-manifest">步骤 2：创建 Slack App（使用 Manifest）<a class="headerlink" href="#2-slack-app-manifest" title="Permanent link">&para;</a></h2>
+<p>使用 Manifest 是创建正确配置的 Slack App 最快的方式。它会一步到位地预配置 Socket Mode、Bot 权限和事件订阅。</p>
+<ol>
+<li>前往 <a href="https://api.slack.com/apps/new">api.slack.com/apps/new</a>。</li>
+<li>点击 <strong>Create New App</strong> → <strong>From an app manifest</strong>。</li>
+<li>选择你的工作区，点击 <strong>Next</strong>。</li>
+<li>粘贴以下 Manifest（选择 JSON 标签页）：</li>
+</ol>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;display_information&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Datus Agent&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Datus AI data analysis agent&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">&quot;bot_user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">&quot;display_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Datus Agent&quot;</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">&quot;always_online&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">&quot;app_home&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">&quot;messages_tab_enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">&quot;messages_tab_read_only_enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nt">&quot;oauth_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="nt">&quot;scopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="nt">&quot;bot&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="s2">&quot;app_mentions:read&quot;</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="s2">&quot;channels:history&quot;</span><span class="p">,</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="s2">&quot;channels:read&quot;</span><span class="p">,</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="s2">&quot;chat:write&quot;</span><span class="p">,</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="s2">&quot;groups:history&quot;</span><span class="p">,</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="s2">&quot;groups:read&quot;</span><span class="p">,</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">        </span><span class="s2">&quot;im:history&quot;</span><span class="p">,</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="s2">&quot;im:read&quot;</span><span class="p">,</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="s2">&quot;im:write&quot;</span><span class="p">,</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="s2">&quot;mpim:history&quot;</span><span class="p">,</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">        </span><span class="s2">&quot;mpim:read&quot;</span><span class="p">,</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">        </span><span class="s2">&quot;mpim:write&quot;</span><span class="p">,</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">        </span><span class="s2">&quot;users:read&quot;</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">  </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="nt">&quot;socket_mode_enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">    </span><span class="nt">&quot;event_subscriptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">      </span><span class="nt">&quot;bot_events&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">        </span><span class="s2">&quot;app_mention&quot;</span><span class="p">,</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">        </span><span class="s2">&quot;message.channels&quot;</span><span class="p">,</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">        </span><span class="s2">&quot;message.groups&quot;</span><span class="p">,</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">        </span><span class="s2">&quot;message.im&quot;</span><span class="p">,</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">        </span><span class="s2">&quot;message.mpim&quot;</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>You only need to install the SDK(s) for the platform(s) you use. Claw will raise a clear error if a required SDK is missing.</p>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
-<p>Add a <code>channels</code> section to your <code>agent.yml</code> file. Each key under <code>channels</code> defines a channel instance.</p>
-<h3 id="general-structure">General Structure<a class="headerlink" href="#general-structure" title="Permanent link">&para;</a></h3>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">channels</span><span class="p">:</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">my-channel</span><span class="p">:</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">adapter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slack</span><span class="w">          </span><span class="c1"># Required: feishu | slack</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">           </span><span class="c1"># Optional: default true</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_namespace</span><span class="w"> </span><span class="c1"># Optional: override default namespace</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">subagent_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">agent_01</span><span class="w">   </span><span class="c1"># Optional: route to a specific sub-agent</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">extra</span><span class="p">:</span><span class="w">                  </span><span class="c1"># Required: adapter-specific credentials</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="c1"># ... platform-specific keys</span>
+<ol>
+<li>检查配置摘要，点击 <strong>Create</strong>。</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">自定义 Manifest</p>
+<p>你可以将 <code>display_information.name</code> 修改为任意名称。如需额外功能，可添加更多权限范围（如 <code>reactions:write</code>、<code>files:write</code>）。</p>
+</div>
+<h2 id="3">步骤 3：生成令牌<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>应用创建后，你需要两个令牌：</p>
+<h3 id="app-level-token-socket-mode">App-Level Token（用于 Socket Mode）<a class="headerlink" href="#app-level-token-socket-mode" title="Permanent link">&para;</a></h3>
+<ol>
+<li>进入 <strong>Settings → Basic Information</strong>。</li>
+<li>向下滚动到 <strong>App-Level Tokens</strong>，点击 <strong>Generate Token and Scopes</strong>。</li>
+<li>输入名称（如 <code>gateway-socket-token</code>），添加权限范围 <code>connections:write</code>，点击 <strong>Generate</strong>。</li>
+<li>复制生成的令牌（以 <code>xapp-</code> 开头）。这就是你的 <code>SLACK_APP_TOKEN</code>。</li>
+</ol>
+<h3 id="bot-token">Bot Token（用于发送消息）<a class="headerlink" href="#bot-token" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在左侧导航栏，进入 <strong>OAuth &amp; Permissions</strong>。</li>
+<li>点击 <strong>Install to Workspace</strong>，审批权限。</li>
+<li>复制 <strong>Bot User OAuth Token</strong>（以 <code>xoxb-</code> 开头）。这就是你的 <code>SLACK_BOT_TOKEN</code>。</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">令牌格式</p>
+<ul>
+<li>App-Level Token：以 <code>xapp-</code> 开头</li>
+<li>Bot User OAuth Token：以 <code>xoxb-</code> 开头</li>
+</ul>
+<p>如果你的令牌以 <code>xoxp-</code> 开头，说明误复制了 User OAuth Token。</p>
+</div>
+<h2 id="4">步骤 4：邀请机器人到频道<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>在 Slack 中，将机器人邀请到你希望它响应消息的频道：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/invite<span class="w"> </span>@YourBotName
 </span></code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>adapter</code></td>
-<td>string</td>
-<td>Yes</td>
-<td>Adapter type: <code>feishu</code> or <code>slack</code></td>
-</tr>
-<tr>
-<td><code>enabled</code></td>
-<td>bool</td>
-<td>No</td>
-<td>Whether this channel is active (default: <code>true</code>)</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>string</td>
-<td>No</td>
-<td>Override the gateway's default namespace</td>
-</tr>
-<tr>
-<td><code>subagent_id</code></td>
-<td>string</td>
-<td>No</td>
-<td>Route messages to a specific sub-agent</td>
-</tr>
-<tr>
-<td><code>extra</code></td>
-<td>dict</td>
-<td>Yes</td>
-<td>Adapter-specific configuration (tokens, keys, etc.)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="slack">Slack<a class="headerlink" href="#slack" title="Permanent link">&para;</a></h3>
+<p>机器人只会接收到它已被邀请的频道中的消息。</p>
+<h2 id="5-datus-agent">步骤 5：配置 Datus Agent<a class="headerlink" href="#5-datus-agent" title="Permanent link">&para;</a></h2>
+<p>在 <code>agent.yml</code> 中添加 Slack 频道配置：</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">channels</span><span class="p">:</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">slack-main</span><span class="p">:</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">adapter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slack</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">extra</span><span class="p">:</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="nt">app_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${SLACK_APP_TOKEN}</span><span class="w">       </span><span class="c1"># xapp-... (Socket Mode token)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="nt">app_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${SLACK_APP_TOKEN}</span><span class="w">       </span><span class="c1"># xapp-... (App-Level Token)</span>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="nt">bot_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${SLACK_BOT_TOKEN}</span><span class="w">       </span><span class="c1"># xoxb-... (Bot User OAuth Token)</span>
 </span></code></pre></div>
-<h3 id="feishu-lark">Feishu (Lark)<a class="headerlink" href="#feishu-lark" title="Permanent link">&para;</a></h3>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">channels</span><span class="p">:</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">feishu-main</span><span class="p">:</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">adapter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feishu</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">extra</span><span class="p">:</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="nt">app_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${FEISHU_APP_ID}</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="nt">app_secret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${FEISHU_APP_SECRET}</span>
+<p>设置环境变量：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SLACK_APP_TOKEN</span><span class="o">=</span><span class="s2">&quot;xapp-1-...&quot;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SLACK_BOT_TOKEN</span><span class="o">=</span><span class="s2">&quot;xoxb-...&quot;</span>
 </span></code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Keep secrets out of config files</p>
-<p>Always use <code>${ENV_VAR}</code> substitution for tokens and secrets. Never commit plaintext credentials to version control.</p>
-</div>
-<h2 id="platform-setup-guides">Platform Setup Guides<a class="headerlink" href="#platform-setup-guides" title="Permanent link">&para;</a></h2>
-<p>For detailed step-by-step instructions on configuring each IM platform, see the dedicated adapter guides:</p>
-<ul>
-<li><a href="../slack/">Slack Setup Guide</a> — Create a Slack App, enable Socket Mode, configure scopes and events</li>
-<li><a href="../feishu/">Feishu (Lark) Setup Guide</a> — Create a self-built app, enable bot capability, configure WebSocket events</li>
-</ul>
-<h2 id="running-the-gateway">Running the Gateway<a class="headerlink" href="#running-the-gateway" title="Permanent link">&para;</a></h2>
-<h3 id="foreground-default">Foreground (default)<a class="headerlink" href="#foreground-default" title="Permanent link">&para;</a></h3>
-<p>Start the Claw gateway in the foreground:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>datus-claw<span class="w"> </span>--config<span class="w"> </span>conf/agent.yml
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Or via uv</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>uv<span class="w"> </span>run<span class="w"> </span>datus-claw<span class="w"> </span>--config<span class="w"> </span>conf/agent.yml
-</span></code></pre></div>
-<h3 id="daemon-background-mode">Daemon (background) Mode<a class="headerlink" href="#daemon-background-mode" title="Permanent link">&para;</a></h3>
-<p>Run the gateway as a background daemon:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Start in background</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>datus-claw<span class="w"> </span>--daemon
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Check status</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>datus-claw<span class="w"> </span>--action<span class="w"> </span>status
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Stop</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>datus-claw<span class="w"> </span>--action<span class="w"> </span>stop
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1"># Restart</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>datus-claw<span class="w"> </span>--action<span class="w"> </span>restart
-</span></code></pre></div>
-<p>All daemon commands also work with <code>uv run</code>, e.g. <code>uv run datus-claw --daemon</code>.</p>
-<p>By default, the PID file is stored at <code>~/.datus/run/datus-claw.pid</code> and daemon logs are written to <code>logs/datus-claw.log</code>. You can override these paths:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>datus-claw<span class="w"> </span>--daemon<span class="w"> </span>--pid-file<span class="w"> </span>/var/run/datus-claw.pid<span class="w"> </span>--daemon-log-file<span class="w"> </span>/var/log/datus-claw.log
-</span></code></pre></div>
-<h3 id="cli-flags">CLI Flags<a class="headerlink" href="#cli-flags" title="Permanent link">&para;</a></h3>
+<h2 id="_2">配置参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Flag</th>
-<th>Default</th>
-<th>Description</th>
+<th>键</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--config</code></td>
-<td><code>./conf/agent.yml</code></td>
-<td>Path to agent configuration file</td>
+<td><code>app_token</code></td>
+<td>是</td>
+<td>Socket Mode 的 App-Level Token（<code>xapp-...</code>）</td>
 </tr>
 <tr>
-<td><code>--namespace</code></td>
-<td><code>default</code> (or <code>DATUS_NAMESPACE</code> env)</td>
-<td>Default namespace for all channels</td>
-</tr>
-<tr>
-<td><code>--host</code></td>
-<td><code>0.0.0.0</code></td>
-<td>Health-check server bind host</td>
-</tr>
-<tr>
-<td><code>--port</code></td>
-<td><code>9000</code></td>
-<td>Health-check server bind port</td>
-</tr>
-<tr>
-<td><code>--debug</code></td>
-<td><code>false</code></td>
-<td>Enable debug logging</td>
-</tr>
-<tr>
-<td><code>--log-level</code></td>
-<td><code>INFO</code> (or <code>DATUS_LOG_LEVEL</code> env)</td>
-<td>Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL</td>
-</tr>
-<tr>
-<td><code>--daemon</code></td>
-<td><code>false</code></td>
-<td>Run in background as a daemon</td>
-</tr>
-<tr>
-<td><code>--action</code></td>
-<td><code>start</code></td>
-<td>Daemon action: <code>start</code>, <code>stop</code>, <code>restart</code>, <code>status</code></td>
-</tr>
-<tr>
-<td><code>--pid-file</code></td>
-<td><code>~/.datus/run/datus-claw.pid</code></td>
-<td>PID file path</td>
-</tr>
-<tr>
-<td><code>--daemon-log-file</code></td>
-<td><code>logs/datus-claw.log</code></td>
-<td>Daemon log file path</td>
+<td><code>bot_token</code></td>
+<td>是</td>
+<td>Bot User OAuth Token（<code>xoxb-...</code>）</td>
 </tr>
 </tbody>
 </table>
-<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
-<h3 id="real-time-streaming">Real-Time Streaming<a class="headerlink" href="#real-time-streaming" title="Permanent link">&para;</a></h3>
-<p>Claw streams every stage of the agent's processing back to the chat:</p>
-<ul>
-<li><strong>Thinking</strong> — The agent's reasoning process</li>
-<li><strong>Tool calls</strong> — Which tools are being invoked and their results</li>
-<li><strong>SQL</strong> — Generated SQL queries displayed as code blocks</li>
-<li><strong>Markdown</strong> — Final answers and explanations</li>
-<li><strong>Errors</strong> — Any errors are reported immediately</li>
-</ul>
-<h3 id="chat-commands">Chat Commands<a class="headerlink" href="#chat-commands" title="Permanent link">&para;</a></h3>
-<p>Claw provides built-in slash commands that are intercepted before messages reach the agentic loop. You can type them with or without the <code>/</code> prefix.</p>
+<h2 id="_3">验证连接<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>启动网关并查看日志：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>-m<span class="w"> </span>datus.gateway.main<span class="w"> </span>--config<span class="w"> </span>conf/agent.yml<span class="w"> </span>--debug
+</span></code></pre></div>
+<p>你应该看到：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Slack adapter &#39;slack-main&#39; connecting...
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Slack adapter &#39;slack-main&#39; started.
+</span></code></pre></div>
+<p>在已邀请的频道中发送消息，机器人应回复 Agent 的分析结果。</p>
+<h2 id="_4">权限与事件清单<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>如果你使用了上述 Manifest 创建应用，所有权限和事件已自动配置。以下清单用于验证或手动调整。</p>
+<h3 id="bot-token_1">必需的 Bot Token 权限<a class="headerlink" href="#bot-token_1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Command</th>
-<th>Aliases</th>
-<th>Description</th>
+<th>权限范围</th>
+<th>用途</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>/help</code></td>
-<td>—</td>
-<td>Show all available commands</td>
+<td><code>chat:write</code></td>
+<td>向频道发送消息</td>
 </tr>
 <tr>
-<td><code>/new</code></td>
-<td><code>/reset</code>, <code>/clear</code></td>
-<td>Reset the current conversation session</td>
+<td><code>channels:history</code></td>
+<td>读取公共频道消息</td>
 </tr>
 <tr>
-<td><code>/verbose [level]</code></td>
-<td>—</td>
-<td>Get or set the verbosity level for the current conversation</td>
+<td><code>channels:read</code></td>
+<td>查看公共频道基本信息</td>
+</tr>
+<tr>
+<td><code>groups:history</code></td>
+<td>读取私有频道消息</td>
+</tr>
+<tr>
+<td><code>groups:read</code></td>
+<td>查看私有频道基本信息</td>
+</tr>
+<tr>
+<td><code>im:history</code></td>
+<td>读取私聊消息</td>
+</tr>
+<tr>
+<td><code>im:read</code></td>
+<td>查看私聊基本信息</td>
+</tr>
+<tr>
+<td><code>im:write</code></td>
+<td>主动发起私聊</td>
+</tr>
+<tr>
+<td><code>mpim:history</code></td>
+<td>读取群组私聊消息</td>
+</tr>
+<tr>
+<td><code>mpim:read</code></td>
+<td>查看群组私聊信息</td>
+</tr>
+<tr>
+<td><code>mpim:write</code></td>
+<td>发起群组私聊</td>
+</tr>
+<tr>
+<td><code>users:read</code></td>
+<td>查看用户信息</td>
+</tr>
+<tr>
+<td><code>app_mentions:read</code></td>
+<td>接收 @提及 事件</td>
 </tr>
 </tbody>
 </table>
-<h4 id="help"><code>/help</code><a class="headerlink" href="#help" title="Permanent link">&para;</a></h4>
-<p>Displays a list of all registered commands with their descriptions.</p>
-<h4 id="new-reset-clear"><code>/new</code> / <code>/reset</code> / <code>/clear</code><a class="headerlink" href="#new-reset-clear" title="Permanent link">&para;</a></h4>
-<p>Resets the current conversation session and starts a fresh one. The bot will confirm the reset and display the new session ID.</p>
-<h4 id="verbose-level"><code>/verbose [level]</code><a class="headerlink" href="#verbose-level" title="Permanent link">&para;</a></h4>
-<p>Controls how much detail the bot shows during processing. When called without an argument, it displays the current verbosity level.</p>
+<h3 id="bot">必需的 Bot 事件<a class="headerlink" href="#bot" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Level</th>
-<th>Aliases</th>
-<th>Behavior</th>
+<th>事件</th>
+<th>触发条件</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>quiet</code></td>
-<td><code>off</code></td>
-<td>Thinking + final output only (no tool calls)</td>
+<td><code>message.channels</code></td>
+<td>公共频道中有新消息</td>
 </tr>
 <tr>
-<td><code>brief</code></td>
-<td><code>on</code></td>
-<td>Thinking + tool summaries + final output</td>
+<td><code>message.groups</code></td>
+<td>私有频道中有新消息</td>
 </tr>
 <tr>
-<td><code>detail</code></td>
-<td><code>full</code></td>
-<td>Thinking + tool parameters/results + final output</td>
+<td><code>message.im</code></td>
+<td>机器人收到私聊消息</td>
+</tr>
+<tr>
+<td><code>message.mpim</code></td>
+<td>群组私聊中有新消息</td>
+</tr>
+<tr>
+<td><code>app_mention</code></td>
+<td>机器人被 @提及</td>
 </tr>
 </tbody>
 </table>
-<p>Examples:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>/verbose           # Show current verbosity level
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>/verbose quiet     # Only show thinking and final answer
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>/verbose brief     # Show tool call summaries
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>/verbose detail    # Show full tool call details
-</span></code></pre></div>
-<h3 id="session-management">Session Management<a class="headerlink" href="#session-management" title="Permanent link">&para;</a></h3>
-<p>Each conversation (group chat, DM, or thread) automatically maps to a persistent session. To start a fresh session, send <code>/new</code>, <code>/reset</code>, or <code>/clear</code>.</p>
-<p>The bot will confirm the reset with the new session ID.</p>
-<h3 id="namespace-override">Namespace Override<a class="headerlink" href="#namespace-override" title="Permanent link">&para;</a></h3>
-<p>Each channel can specify a <code>namespace</code> in its configuration to override the gateway's default namespace. This allows different channels to query different databases.</p>
-<h3 id="subagent-routing">Subagent Routing<a class="headerlink" href="#subagent-routing" title="Permanent link">&para;</a></h3>
-<p>Use the <code>subagent_id</code> field to route messages from a specific channel to a dedicated sub-agent, enabling specialized behavior per channel.</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="sdk-not-installed">SDK Not Installed<a class="headerlink" href="#sdk-not-installed" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ImportError: slack_sdk is required for the Slack adapter. Install it with: pip install slack-sdk[socket_mode]
-</span></code></pre></div>
-<p>Install the required SDK package for your platform. See the <a href="#installation">Installation</a> section.</p>
-<h3 id="invalid-credentials">Invalid Credentials<a class="headerlink" href="#invalid-credentials" title="Permanent link">&para;</a></h3>
-<p>If the bot connects but immediately disconnects or logs authentication errors, verify that:</p>
+<details class="info">
+<summary>手动配置（不使用 Manifest）</summary>
+<p>如果你更倾向于手动配置应用：</p>
+<ol>
+<li>前往 <a href="https://api.slack.com/apps">api.slack.com/apps</a> → <strong>Create New App</strong> → <strong>From scratch</strong>。</li>
+<li><strong>启用 Socket Mode</strong>：<strong>Settings → Socket Mode</strong> → 开启 → 生成 App-Level Token（添加 <code>connections:write</code> 权限范围）。</li>
+<li><strong>添加 Bot 权限</strong>：<strong>OAuth &amp; Permissions → Bot Token Scopes</strong> → 逐一添加上表中的权限范围。</li>
+<li><strong>启用事件订阅</strong>：<strong>Event Subscriptions</strong> → 开启 → 在 <strong>Subscribe to bot events</strong> 中添加上表中的事件 → <strong>Save Changes</strong>。</li>
+<li><strong>安装应用</strong>：<strong>OAuth &amp; Permissions</strong> → <strong>Install to Workspace</strong> → 复制 Bot User OAuth Token。</li>
+</ol>
+</details>
+<h2 id="_5">故障排查<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="invalid_auth">"invalid_auth" 错误<a class="headerlink" href="#invalid_auth" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Slack: <code>app_token</code> starts with <code>xapp-</code> and <code>bot_token</code> starts with <code>xoxb-</code></li>
-<li>Feishu: <code>app_id</code> and <code>app_secret</code> match the self-built app credentials</li>
+<li>确认 <code>bot_token</code> 以 <code>xoxb-</code> 开头且未过期。</li>
+<li>重新安装应用到工作区以重新生成令牌。</li>
 </ul>
-<h3 id="bot-not-receiving-messages">Bot Not Receiving Messages<a class="headerlink" href="#bot-not-receiving-messages" title="Permanent link">&para;</a></h3>
+<h3 id="_6">机器人连接成功但收不到消息<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Slack</strong>: Ensure the bot is invited to the channel and event subscriptions are enabled.</li>
-<li><strong>Feishu</strong>: Ensure the WebSocket subscription mode is selected and <code>im.message.receive_v1</code> event is added.</li>
+<li>确保机器人已被邀请到频道（<code>/invite @BotName</code>）。</li>
+<li>确认事件订阅已启用，且已添加四个 <code>message.*</code> 事件。</li>
+<li>检查 Socket Mode 是否已启用。</li>
 </ul>
-<h3 id="debug-logging">Debug Logging<a class="headerlink" href="#debug-logging" title="Permanent link">&para;</a></h3>
-<p>Enable verbose logging to diagnose connection issues:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>datus-claw<span class="w"> </span>--config<span class="w"> </span>conf/agent.yml<span class="w"> </span>--debug
-</span></code></pre></div>
-<p>Or set the environment variable:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DATUS_LOG_LEVEL</span><span class="o">=</span>DEBUG
-</span></code></pre></div>
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h3 id="missing_scope">"missing_scope" 错误<a class="headerlink" href="#missing_scope" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../../configuration/introduction/">Configuration</a> — Full agent configuration reference</li>
-<li><a href="../../web_chatbot/introduction/">Chatbot</a> — Web-based chatbot interface</li>
-<li><a href="../../configuration/databases/">Databases</a> — Database configuration details</li>
-<li><a href="../../subagent/introduction/">Subagent</a> — Sub-agent configuration and customization</li>
+<li>前往 <strong>OAuth &amp; Permissions → Bot Token Scopes</strong> 添加缺少的权限范围。</li>
+<li>添加新权限后需要重新安装应用。</li>
+</ul>
+<h3 id="_7">机器人消息触发循环<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>适配器会自动忽略带有子类型的消息（编辑、删除、机器人消息）。如果仍出现循环，请检查机器人是否在回复自己的消息。</li>
 </ul>
 
 
@@ -4568,33 +4242,33 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../web_chatbot/introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chatbot">
+          <a href="../introduction/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 介绍">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Previous
+                上一页
               </span>
               <div class="md-ellipsis">
-                Chatbot
+                介绍
               </div>
             </div>
           </a>
         
         
           
-          <a href="../slack/" class="md-footer__link md-footer__link--next" aria-label="Next: Slack">
+          <a href="../feishu/" class="md-footer__link md-footer__link--next" aria-label="下一页: 飞书">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Next
+                下一页
               </span>
               <div class="md-ellipsis">
-                Slack
+                飞书
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4684,10 +4358,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.tracking", "navigation.indexes", "content.code.copy", "content.code.select", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.tracking", "navigation.indexes", "content.code.copy", "content.code.select", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
