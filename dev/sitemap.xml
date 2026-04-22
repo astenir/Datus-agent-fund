@@ -57,6 +57,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/API/knowledge_base/"/>
     </url>
     <url>
+        <loc>https://docs.datus.ai/dev/API/models/</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/API/models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/API/models/"/>
+    </url>
+    <url>
         <loc>https://docs.datus.ai/dev/adapters/bi_adapters/</loc>
         <lastmod>2026-04-22</lastmod>
         <changefreq>daily</changefreq>
@@ -125,6 +132,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/cli/mcp_extensions/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/cli/mcp_extensions/"/>
+    </url>
+    <url>
+        <loc>https://docs.datus.ai/dev/cli/model_command/</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/cli/model_command/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/cli/model_command/"/>
     </url>
     <url>
         <loc>https://docs.datus.ai/dev/cli/plan_mode/</loc>
@@ -582,6 +596,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devAPI/knowledge_base/"/>
     </url>
     <url>
+        <loc>https://docs.datus.ai/dev/zh/API/models/</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/API/models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devAPI/models/"/>
+    </url>
+    <url>
         <loc>https://docs.datus.ai/dev/zh/adapters/bi_adapters/</loc>
         <lastmod>2026-04-22</lastmod>
         <changefreq>daily</changefreq>
@@ -650,6 +671,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/cli/mcp_extensions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devcli/mcp_extensions/"/>
+    </url>
+    <url>
+        <loc>https://docs.datus.ai/dev/zh/cli/model_command/</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/cli/model_command/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devcli/model_command/"/>
     </url>
     <url>
         <loc>https://docs.datus.ai/dev/zh/cli/plan_mode/</loc>
