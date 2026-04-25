@@ -6631,45 +6631,55 @@
 <hr />
 <h2 id="gen_dashboard">gen_dashboard<a class="headerlink" href="#gen_dashboard" title="Permanent link">&para;</a></h2>
 <h3 id="overview_9">Overview<a class="headerlink" href="#overview_9" title="Permanent link">&para;</a></h3>
-<p>The gen_dashboard subagent creates, updates, and manages BI dashboards on Superset and Grafana. It is invoked by the chat agent via <code>task(type="gen_dashboard")</code> and uses the BI tools from <code>BIFuncTool</code> to drive the full dashboard creation workflow through LLM function calling.</p>
+<p>The gen_dashboard subagent creates, updates, and manages BI dashboards on Superset and Grafana. It is invoked by the chat agent via <code>task(type="gen_dashboard")</code> and uses BI tools from <code>BIFuncTool</code> to build dashboard assets on existing serving tables or SQL datasets.</p>
 <h3 id="key-features_4">Key Features<a class="headerlink" href="#key-features_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Multi-platform</strong>: Supports Apache Superset and Grafana; platform is explicit via <code>bi_platform</code> or auto-detected from <code>agent.services.bi_platforms</code></li>
 <li><strong>Dynamic tool exposure</strong>: Tools are exposed based on adapter Mixin capabilities — only operations the platform actually supports appear as LLM tools</li>
-<li><strong>Data materialization</strong>: <code>write_query</code> bridges source database results to the BI platform's own database, decoupling source data from visualization</li>
-<li><strong>Skill-guided workflows</strong>: The built-in <code>gen-dashboard</code> skill provides step-by-step workflow guidance for each platform</li>
+<li><strong>Existing serving data only</strong>: data preparation is handled separately by <code>gen_job</code> / <code>scheduler</code>; gen_dashboard builds BI dataset / chart / dashboard assets</li>
+<li><strong>Skill-guided workflows</strong>: Platform skills (<code>superset-dashboard</code>, <code>grafana-dashboard</code>) provide step-by-step workflow guidance; <code>bi-validation</code> runs automatically after creation</li>
 </ul>
 <h3 id="configuration_5">Configuration<a class="headerlink" href="#configuration_5" title="Permanent link">&para;</a></h3>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nt">agent</span><span class="p">:</span>
 </span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">  </span><span class="nt">services</span><span class="p">:</span>
-</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">    </span><span class="nt">bi_platforms</span><span class="p">:</span>
-</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">      </span><span class="nt">superset</span><span class="p">:</span>
-</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span>
-</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="w">        </span><span class="nt">api_base_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:8088&quot;</span>
-</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="w">        </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${SUPERSET_USER}&quot;</span>
-</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a><span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${SUPERSET_PASSWORD}&quot;</span>
-</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a><span class="w">        </span><span class="nt">dataset_db</span><span class="p">:</span>
-</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a><span class="w">          </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${SUPERSET_DB_URI}&quot;</span>
-</span><span id="__span-41-11"><a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a><span class="w">          </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;public&quot;</span>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">    </span><span class="nt">datasources</span><span class="p">:</span>
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">      </span><span class="nt">serving_pg</span><span class="p">:</span>
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgresql</span>
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="w">        </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5433</span>
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a><span class="w">        </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset_examples</span>
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a><span class="w">        </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bi_public</span>
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a><span class="w">        </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${SERVING_WRITE_USER}&quot;</span>
+</span><span id="__span-41-11"><a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a><span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${SERVING_WRITE_PASSWORD}&quot;</span>
 </span><span id="__span-41-12"><a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a>
-</span><span id="__span-41-13"><a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a><span class="w">  </span><span class="nt">agentic_nodes</span><span class="p">:</span>
-</span><span id="__span-41-14"><a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a><span class="w">    </span><span class="nt">gen_dashboard</span><span class="p">:</span>
-</span><span id="__span-41-15"><a id="__codelineno-41-15" name="__codelineno-41-15" href="#__codelineno-41-15"></a><span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claude</span><span class="w">           </span><span class="c1"># Optional: defaults to configured model</span>
-</span><span id="__span-41-16"><a id="__codelineno-41-16" name="__codelineno-41-16" href="#__codelineno-41-16"></a><span class="w">      </span><span class="nt">max_turns</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w">           </span><span class="c1"># Optional: defaults to 30</span>
-</span><span id="__span-41-17"><a id="__codelineno-41-17" name="__codelineno-41-17" href="#__codelineno-41-17"></a><span class="w">      </span><span class="nt">bi_platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span><span class="w">   </span><span class="c1"># Optional: auto-detected when only one BI platform is configured</span>
+</span><span id="__span-41-13"><a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a><span class="w">    </span><span class="nt">bi_platforms</span><span class="p">:</span>
+</span><span id="__span-41-14"><a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a><span class="w">      </span><span class="nt">superset</span><span class="p">:</span>
+</span><span id="__span-41-15"><a id="__codelineno-41-15" name="__codelineno-41-15" href="#__codelineno-41-15"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span>
+</span><span id="__span-41-16"><a id="__codelineno-41-16" name="__codelineno-41-16" href="#__codelineno-41-16"></a><span class="w">        </span><span class="nt">api_base_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:8088&quot;</span>
+</span><span id="__span-41-17"><a id="__codelineno-41-17" name="__codelineno-41-17" href="#__codelineno-41-17"></a><span class="w">        </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${SUPERSET_USER}&quot;</span>
+</span><span id="__span-41-18"><a id="__codelineno-41-18" name="__codelineno-41-18" href="#__codelineno-41-18"></a><span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${SUPERSET_PASSWORD}&quot;</span>
+</span><span id="__span-41-19"><a id="__codelineno-41-19" name="__codelineno-41-19" href="#__codelineno-41-19"></a><span class="w">        </span><span class="nt">dataset_db</span><span class="p">:</span>
+</span><span id="__span-41-20"><a id="__codelineno-41-20" name="__codelineno-41-20" href="#__codelineno-41-20"></a><span class="w">          </span><span class="nt">datasource_ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serving_pg</span>
+</span><span id="__span-41-21"><a id="__codelineno-41-21" name="__codelineno-41-21" href="#__codelineno-41-21"></a><span class="w">          </span><span class="nt">bi_database_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">analytics_pg</span>
+</span><span id="__span-41-22"><a id="__codelineno-41-22" name="__codelineno-41-22" href="#__codelineno-41-22"></a>
+</span><span id="__span-41-23"><a id="__codelineno-41-23" name="__codelineno-41-23" href="#__codelineno-41-23"></a><span class="w">  </span><span class="nt">agentic_nodes</span><span class="p">:</span>
+</span><span id="__span-41-24"><a id="__codelineno-41-24" name="__codelineno-41-24" href="#__codelineno-41-24"></a><span class="w">    </span><span class="nt">gen_dashboard</span><span class="p">:</span>
+</span><span id="__span-41-25"><a id="__codelineno-41-25" name="__codelineno-41-25" href="#__codelineno-41-25"></a><span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claude</span><span class="w">           </span><span class="c1"># Optional: defaults to configured model</span>
+</span><span id="__span-41-26"><a id="__codelineno-41-26" name="__codelineno-41-26" href="#__codelineno-41-26"></a><span class="w">      </span><span class="nt">max_turns</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w">           </span><span class="c1"># Optional: defaults to 30</span>
+</span><span id="__span-41-27"><a id="__codelineno-41-27" name="__codelineno-41-27" href="#__codelineno-41-27"></a><span class="w">      </span><span class="nt">bi_platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superset</span><span class="w">   </span><span class="c1"># Optional: auto-detected when only one BI platform is configured</span>
 </span></code></pre></div>
 <p><strong>Requirements:</strong>
 - <code>agent.services.bi_platforms</code> section in <code>agent.yml</code> with platform credentials
 - <code>datus-bi-superset</code> or <code>datus-bi-grafana</code> package installed</p>
 <h3 id="how-it-works_4">How It Works<a class="headerlink" href="#how-it-works_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
-    A[chat agent] --&gt;|task type=gen_dashboard| B[GenDashboardAgenticNode]
-    B --&gt; C[_setup_bi_tools]
-    C --&gt; D[adapter_registry.get platform]
-    D --&gt; E[BIFuncTool.available_tools]
-    E --&gt; F[LLM Function Calling]
-    F --&gt;|Superset| G[write_query → create_dataset → create_chart → create_dashboard]
-    F --&gt;|Grafana| H[write_query → create_dashboard → create_chart]</code></pre>
+    A[task gen_dashboard] --&gt; C[GenDashboardAgenticNode]
+    C --&gt; D[BIFuncTool.available_tools]
+    D --&gt; E[LLM Function Calling]
+    E --&gt;|Superset| F[list_bi_databases → create_dataset → create_chart → create_dashboard → add_chart_to_dashboard]
+    E --&gt;|Grafana| G[create_dashboard → create_chart]
+    F --&gt; H[ValidationHook.on_end]
+    G --&gt; H</code></pre>
 <h3 id="available-tools_1">Available Tools<a class="headerlink" href="#available-tools_1" title="Permanent link">&para;</a></h3>
 <p>Tools are exposed dynamically based on which Mixins the platform adapter implements:</p>
 <table>
@@ -6762,9 +6772,9 @@
 <td>Delete a dataset</td>
 </tr>
 <tr>
-<td><code>write_query</code></td>
-<td><code>dataset_db_uri</code> configured</td>
-<td>Materialize query results to BI database</td>
+<td><code>get_bi_serving_target</code></td>
+<td><code>dataset_db</code> configured</td>
+<td>Return serving DB contract for orchestrator hand-off</td>
 </tr>
 </tbody>
 </table>
@@ -6798,6 +6808,7 @@
 <ul>
 <li><strong>Full job lifecycle</strong>: Submit, trigger, pause, resume, update, and delete Airflow DAG jobs</li>
 <li><strong>SQL and SparkSQL support</strong>: Submit both SQL and SparkSQL job types</li>
+<li><strong>SQL file management</strong>: Create or update job SQL files with filesystem tools before submission</li>
 <li><strong>Monitoring</strong>: List job runs, fetch run logs, and troubleshoot failures</li>
 <li><strong>Connection discovery</strong>: List available Airflow connections for job configuration</li>
 </ul>
@@ -6825,10 +6836,11 @@
 <pre class="mermaid"><code>graph LR
     A[chat agent] --&gt;|task type=scheduler| B[SchedulerAgenticNode]
     B --&gt; C[LLM Function Calling]
-    C --&gt; D[submit_sql_job / submit_sparksql_job]
-    C --&gt; E[trigger_scheduler_job]
-    C --&gt; F[pause_job / resume_job]
-    C --&gt; G[list_job_runs / get_run_log]</code></pre>
+    C --&gt; D[write_file / edit_file]
+    D --&gt; E[submit_sql_job / submit_sparksql_job]
+    C --&gt; F[trigger_scheduler_job]
+    C --&gt; G[pause_job / resume_job]
+    C --&gt; H[list_job_runs / get_run_log]</code></pre>
 <h3 id="available-tools_2">Available Tools<a class="headerlink" href="#available-tools_2" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6845,6 +6857,10 @@
 <tr>
 <td><code>submit_sparksql_job</code></td>
 <td>Submit a scheduled SparkSQL job from a <code>.sql</code> file</td>
+</tr>
+<tr>
+<td><code>read_file</code> / <code>write_file</code> / <code>edit_file</code></td>
+<td>Read, create, or update SQL files used by scheduled jobs</td>
 </tr>
 <tr>
 <td><code>trigger_scheduler_job</code></td>
@@ -6981,10 +6997,10 @@
 </tr>
 <tr>
 <td><code>gen_job</code></td>
-<td>Data pipeline jobs (intra-DB ETL + cross-DB migration)</td>
-<td>Job / migration result</td>
+<td>Data pipeline jobs (intra-DB ETL + cross-DB transfer)</td>
+<td>Job / transfer result</td>
 <td>Source + target databases</td>
-<td>DDL/DML execution, cross-dialect type mapping via MigrationTargetMixin, <code>transfer_query_result</code>, mandatory reconciliation when source ≠ target</td>
+<td>DDL/DML execution, cross-dialect type mapping via MigrationTargetMixin, <code>transfer_query_result</code>, lightweight reconciliation when source != target</td>
 </tr>
 <tr>
 <td><code>gen_skill</code></td>
@@ -6998,7 +7014,7 @@
 <td>BI dashboard CRUD (Superset, Grafana)</td>
 <td>Dashboard result</td>
 <td>BI platform</td>
-<td>Dynamic tool exposure, data materialization, multi-platform</td>
+<td>Dynamic tool exposure, existing serving data, multi-platform</td>
 </tr>
 <tr>
 <td><code>scheduler</code></td>
