@@ -4235,7 +4235,8 @@
 By default, Datus points MetricFlow at the current project's semantic model directory:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{project_root}/subject/semantic_models/
 </span></code></pre></div>
-- <code>project_root</code> is the active Datus project root.</p>
+- <code>project_root</code> is the active Datus project root.
+- The configured semantic model directory is treated as authoritative. Generated YAML files under project-local or gitignored directories are still included in MetricFlow validation.</p>
 <h3 id="selection-rules">Selection Rules<a class="headerlink" href="#selection-rules" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The key under <code>services.semantic_layer</code> <strong>must equal the adapter type</strong> (for example <code>metricflow</code>). If a <code>type:</code> field is present, it must match the key; otherwise Datus raises a configuration error at startup. Comparison is case-insensitive and trims surrounding whitespace, so <code>MetricFlow</code> and <code>metricflow</code> also match.</li>
@@ -4383,6 +4384,7 @@ By default, Datus points MetricFlow at the current project's semantic model dire
 <li>Full MetricFlow API integration</li>
 <li>YAML-based semantic model files</li>
 <li>Three-stage validation (lint, parse, semantic)</li>
+<li>Validation reports YAML issues even when the MetricFlow client cannot be fully initialized from invalid generated files</li>
 <li>SQL generation and explain</li>
 <li>Time range filtering with granularity</li>
 </ul>
