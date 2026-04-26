@@ -3857,7 +3857,8 @@ environment variables from Step 0.</p>
 </span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">    </span><span class="nt">scheduler</span><span class="p">:</span>
 </span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="w">      </span><span class="nt">scheduler_service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airflow_prod</span>
 </span></code></pre></div>
-<p>Then start Datus on the workbench database:</p>
+<p>Then start Datus with the <code>lever_duckdb</code> datasource, which points at the
+workbench DuckDB file:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DACOMP_HOME</span><span class="s2">&quot;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>datus-cli<span class="w"> </span>--datasource<span class="w"> </span>lever_duckdb
 </span></code></pre></div>
@@ -3926,10 +3927,12 @@ using:</p>
 <li>the job becomes visible in the Airflow UI</li>
 </ul>
 <h2 id="step-8-promote-the-marts-table-to-the-superset-serving-db">Step 8: Promote the Marts Table to the Superset Serving DB<a class="headerlink" href="#step-8-promote-the-marts-table-to-the-superset-serving-db" title="Permanent link">&para;</a></h2>
-<p>The marts table above was built in <code>lever_duckdb</code>. Before dashboard generation can
-create Superset assets, copy that table into the BI-registered
-<code>superset_serving</code> Postgres datasource referenced by <code>dataset_db.datasource_ref</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Please create or replace superset_serving.public.lever__requisition_enhanced by copying lever_duckdb.marts.lever__requisition_enhanced, then verify the transferred row count.
+<p>The marts table above was built through the <code>lever_duckdb</code> datasource. Before
+dashboard generation can create Superset assets, copy that table into the
+BI-registered <code>superset_serving</code> Postgres datasource referenced by
+<code>dataset_db.datasource_ref</code>. These names are Datus datasource names from
+<code>agent.yml</code>, not physical database or catalog names inside DuckDB or Postgres.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Please copy the source table marts.lever__requisition_enhanced from the lever_duckdb datasource into the superset_serving datasource as public.lever__requisition_enhanced, replacing the target table if it already exists. Then verify the source and target row counts.
 </span></code></pre></div>
 <p>After this step, the table exists in the same database Superset knows as
 <code>bi_database_name: examples</code>.</p>

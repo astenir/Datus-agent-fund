@@ -4259,7 +4259,7 @@
 </span></code></pre></div>
 <h2 id="_10">使用示例<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <h3 id="_11">两步流程<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>用<span class="w"> </span>gen_job<span class="w"> </span>把过去<span class="w"> </span><span class="m">90</span><span class="w"> </span>天每日营收写入<span class="w"> </span>serving_pg.bi_public.rpt_revenue_daily。
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>用<span class="w"> </span>gen_job<span class="w"> </span>把过去<span class="w"> </span><span class="m">90</span><span class="w"> </span>天每日营收写入<span class="w"> </span><span class="sb">`</span>serving_pg<span class="sb">`</span><span class="w"> </span>datasource，目标表为<span class="w"> </span><span class="sb">`</span>bi_public.rpt_revenue_daily<span class="sb">`</span>。
 </span></code></pre></div>
 <p>表准备好之后：</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/gen_dashboard<span class="w"> </span>基于<span class="w"> </span>bi_public.rpt_revenue_daily<span class="w"> </span>创建一个<span class="w"> </span>Superset<span class="w"> </span>dashboard

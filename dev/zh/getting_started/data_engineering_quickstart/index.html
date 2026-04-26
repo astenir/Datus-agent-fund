@@ -3852,7 +3852,7 @@
 </span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">    </span><span class="nt">scheduler</span><span class="p">:</span>
 </span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="w">      </span><span class="nt">scheduler_service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airflow_prod</span>
 </span></code></pre></div>
-<p>然后连接到这个 DuckDB 工作库启动 Datus：</p>
+<p>然后使用 <code>lever_duckdb</code> datasource 启动 Datus；它指向上面的 DuckDB 工作库：</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DACOMP_HOME</span><span class="s2">&quot;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>datus-cli<span class="w"> </span>--datasource<span class="w"> </span>lever_duckdb
 </span></code></pre></div>
@@ -3915,9 +3915,11 @@ staging 表。agent 会把任务分发到建表流程：</p>
 <li>Airflow UI 中出现对应任务</li>
 </ul>
 <h2 id="8-marts-superset-serving-db">步骤 8：把 marts 表同步到 Superset serving DB<a class="headerlink" href="#8-marts-superset-serving-db" title="Permanent link">&para;</a></h2>
-<p>上面的 marts 表是在 <code>lever_duckdb</code> 里生成的。创建仪表盘之前，需要先把它复制到
-<code>dataset_db.datasource_ref</code> 指向的 BI 注册数据库 <code>superset_serving</code>（Postgres）。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Please create or replace superset_serving.public.lever__requisition_enhanced by copying lever_duckdb.marts.lever__requisition_enhanced, then verify the transferred row count.
+<p>上面的 marts 表是通过 <code>lever_duckdb</code> datasource 生成的。创建仪表盘之前，需要先把它复制到
+<code>dataset_db.datasource_ref</code> 指向的 BI 注册数据库 <code>superset_serving</code>（Postgres）。
+这里的 <code>lever_duckdb</code> 和 <code>superset_serving</code> 都是 <code>agent.yml</code> 里的 Datus
+datasource 名称，不是 DuckDB 或 Postgres 内部真实的 database/catalog 名。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Please copy the source table marts.lever__requisition_enhanced from the lever_duckdb datasource into the superset_serving datasource as public.lever__requisition_enhanced, replacing the target table if it already exists. Then verify the source and target row counts.
 </span></code></pre></div>
 <p>完成后，这张表就位于 Superset 通过 <code>bi_database_name: examples</code> 识别的数据库中。</p>
 <h2 id="9-superset-dashboard">步骤 9：创建 Superset Dashboard<a class="headerlink" href="#9-superset-dashboard" title="Permanent link">&para;</a></h2>
