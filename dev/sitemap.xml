@@ -22,13 +22,6 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/release_notes/"/>
     </url>
     <url>
-        <loc>https://docs.datus.ai/dev/release_notes_0.2.7_zh/</loc>
-        <lastmod>2026-04-27</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/release_notes_0.2.7_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/release_notes_0.2.7_zh/"/>
-    </url>
-    <url>
         <loc>https://docs.datus.ai/dev/API/chat/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
@@ -113,6 +106,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/cli/context_command/"/>
     </url>
     <url>
+        <loc>https://docs.datus.ai/dev/cli/effort_command/</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/cli/effort_command/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/cli/effort_command/"/>
+    </url>
+    <url>
         <loc>https://docs.datus.ai/dev/cli/execution_command/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
@@ -120,11 +120,25 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/cli/execution_command/"/>
     </url>
     <url>
+        <loc>https://docs.datus.ai/dev/cli/init_command/</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/cli/init_command/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/cli/init_command/"/>
+    </url>
+    <url>
         <loc>https://docs.datus.ai/dev/cli/introduction/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/cli/introduction/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/cli/introduction/"/>
+    </url>
+    <url>
+        <loc>https://docs.datus.ai/dev/cli/language_command/</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/cli/language_command/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/cli/language_command/"/>
     </url>
     <url>
         <loc>https://docs.datus.ai/dev/cli/mcp_extensions/</loc>
@@ -246,13 +260,6 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/develop/"/>
     </url>
     <url>
-        <loc>https://docs.datus.ai/dev/develop/0.2.7_pre_release_test_plan/</loc>
-        <lastmod>2026-04-27</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/develop/0.2.7_pre_release_test_plan/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/develop/0.2.7_pre_release_test_plan/"/>
-    </url>
-    <url>
         <loc>https://docs.datus.ai/dev/develop/Architecture/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
@@ -265,13 +272,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/develop/Contributing/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/develop/Contributing/"/>
-    </url>
-    <url>
-        <loc>https://docs.datus.ai/dev/develop/feedback_agent_workflow/</loc>
-        <lastmod>2026-04-27</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/dev/develop/feedback_agent_workflow/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/devzh/develop/feedback_agent_workflow/"/>
     </url>
     <url>
         <loc>https://docs.datus.ai/dev/gateway/feishu/</loc>
@@ -547,13 +547,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devrelease_notes/"/>
     </url>
     <url>
-        <loc>https://docs.datus.ai/dev/zh/release_notes_0.2.7_zh/</loc>
-        <lastmod>2026-04-27</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/release_notes_0.2.7_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devrelease_notes_0.2.7_zh/"/>
-    </url>
-    <url>
         <loc>https://docs.datus.ai/dev/zh/API/chat/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
@@ -638,6 +631,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devcli/context_command/"/>
     </url>
     <url>
+        <loc>https://docs.datus.ai/dev/zh/cli/effort_command/</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/cli/effort_command/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devcli/effort_command/"/>
+    </url>
+    <url>
         <loc>https://docs.datus.ai/dev/zh/cli/execution_command/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
@@ -645,11 +645,25 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devcli/execution_command/"/>
     </url>
     <url>
+        <loc>https://docs.datus.ai/dev/zh/cli/init_command/</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/cli/init_command/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devcli/init_command/"/>
+    </url>
+    <url>
         <loc>https://docs.datus.ai/dev/zh/cli/introduction/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/cli/introduction/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devcli/introduction/"/>
+    </url>
+    <url>
+        <loc>https://docs.datus.ai/dev/zh/cli/language_command/</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/cli/language_command/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devcli/language_command/"/>
     </url>
     <url>
         <loc>https://docs.datus.ai/dev/zh/cli/mcp_extensions/</loc>
@@ -771,13 +785,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devdevelop/"/>
     </url>
     <url>
-        <loc>https://docs.datus.ai/dev/zh/develop/0.2.7_pre_release_test_plan/</loc>
-        <lastmod>2026-04-27</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/develop/0.2.7_pre_release_test_plan/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devdevelop/0.2.7_pre_release_test_plan/"/>
-    </url>
-    <url>
         <loc>https://docs.datus.ai/dev/zh/develop/Architecture/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
@@ -790,13 +797,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/develop/Contributing/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devdevelop/Contributing/"/>
-    </url>
-    <url>
-        <loc>https://docs.datus.ai/dev/zh/develop/feedback_agent_workflow/</loc>
-        <lastmod>2026-04-27</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://docs.datus.ai/dev/zh/develop/feedback_agent_workflow/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.datus.ai/devdevelop/feedback_agent_workflow/"/>
     </url>
     <url>
         <loc>https://docs.datus.ai/dev/zh/gateway/feishu/</loc>

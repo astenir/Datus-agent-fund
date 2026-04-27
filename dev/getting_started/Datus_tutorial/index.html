@@ -3821,10 +3821,10 @@
 <li>Run multi-round evaluation to demonstrate the value of <a href="../contextual_data_engineering/">contextual data engineering</a></li>
 </ol>
 <h2 id="1-prerequisites-configure-your-datus-agent">1. Prerequisites: Configure Your Datus Agent<a class="headerlink" href="#1-prerequisites-configure-your-datus-agent" title="Permanent link">&para;</a></h2>
-<p>Before running the tutorial, configure your LLM and database connections:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>datus-agent<span class="w"> </span>configure
+<p>Before running the tutorial, configure your LLM via the CLI's <code>/model</code> slash command and ensure the global <code>~/.datus/conf/agent.yml</code> exists:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>datus-cli<span class="w">           </span><span class="c1"># then inside the REPL: /model</span>
 </span></code></pre></div>
-<p>This sets up your LLM provider (API key) and saves the configuration to <code>~/.datus/conf/agent.yml</code>. The tutorial will automatically configure the california_schools database for you.</p>
+<p>The <code>/model</code> picker writes provider credentials into <code>agent.yml</code>. You don't need to add any datasource manually — the tutorial automatically appends the <code>california_schools</code> datasource for you.</p>
 <p>Since this tutorial involves metric generation, you also need to install the semantic layer adapter:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>datus-semantic-metricflow
 </span></code></pre></div>
@@ -3970,11 +3970,11 @@ If metrics initialization fails, adjust the model configuration for <code>gen_se
 <li>Step 3: <code>output</code> node formats and writes the results to local disk</li>
 </ul>
 <p>The key difference is that <code>datus_schools_context</code> has access to <code>context_search_tools</code>, enabling it to leverage the <a href="../../knowledge_base/metrics/">metrics</a> and <a href="../../knowledge_base/reference_sql/">reference SQL</a> you built in previous steps.</p>
-<p>You can now:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>/datus_schools &lt;your question&gt;
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>/datus_schools_context &lt;your question&gt;
+<p>You can now switch to either subagent inside the CLI and ask questions:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>/agent datus_schools           # then type your question on the next line
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>/agent datus_schools_context   # ditto
 </span></code></pre></div>
-<p>Or use the chatbot in <a href="../../web_chatbot/introduction/">Datus-Chat</a>. </p>
+<p><code>/agent &lt;name&gt;</code> switches the default agent for subsequent natural-language turns. Type your question directly (no prefix) once the agent is active. You can also drive the same subagents from the chatbot in <a href="../../web_chatbot/introduction/">Datus-Chat</a>.</p>
 <h2 id="3-benchmark-and-evaluation">3. Benchmark and evaluation<a class="headerlink" href="#3-benchmark-and-evaluation" title="Permanent link">&para;</a></h2>
 <p>This is the key part of the tutorial: comparing a <strong>non-context</strong> agent vs. a <strong>context-rich</strong> agent.</p>
 <h3 id="31-evaluate-datus_schools-baseline">3.1 Evaluate <code>datus_schools</code> (baseline)<a class="headerlink" href="#31-evaluate-datus_schools-baseline" title="Permanent link">&para;</a></h3>
@@ -3994,7 +3994,7 @@ If metrics initialization fails, adjust the model configuration for <code>gen_se
 <p>By comparing <code>schools1.txt</code> and <code>schools2.txt</code>, you can explicitly see how the context-rich agent improves SQL accuracy, reduces errors, and generates more semantically correct queries compared to the baseline agent.</p>
 <h2 id="4-multi-round-benchmark-demonstrate-context-evolution">4. Multi-round Benchmark: Demonstrate Context Evolution<a class="headerlink" href="#4-multi-round-benchmark-demonstrate-context-evolution" title="Permanent link">&para;</a></h2>
 <p>This is the most powerful demonstration of contextual data engineering:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>python<span class="w"> </span>-m<span class="w"> </span>datus.multi_round_benchmark<span class="w"> </span><span class="se">\</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>datus-agent<span class="w"> </span>multi-round-benchmark<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span>--config<span class="w"> </span>~/.datus/conf/agent.yml<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span>--datasource<span class="w"> </span>california_schools<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span>--benchmark<span class="w"> </span>california_schools<span class="w"> </span><span class="se">\</span>

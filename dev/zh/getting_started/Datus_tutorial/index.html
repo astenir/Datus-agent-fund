@@ -3821,9 +3821,10 @@
 <li>运行多轮评估以展示<a href="../contextual_data_engineering/">上下文数据工程</a>的价值</li>
 </ol>
 <h2 id="1-datus-agent">1. 前置条件：配置 Datus Agent<a class="headerlink" href="#1-datus-agent" title="Permanent link">&para;</a></h2>
-<p>运行教程之前，请先配置您的模型和数据库连接：</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>datus-agent<span class="w"> </span>configure
+<p>运行教程之前，请先在 CLI 内通过 <code>/model</code> 斜杠命令配置好 LLM，并确保全局的 <code>~/.datus/conf/agent.yml</code> 已存在：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>datus-cli<span class="w">           </span><span class="c1"># 进入 REPL 后输入：/model</span>
 </span></code></pre></div>
+<p><code>/model</code> 选择器会把 provider 凭据写入 <code>agent.yml</code>。无需手动添加任何数据源——教程会自动把 <code>california_schools</code> 数据源追加进配置。</p>
 <p>由于本教程涉及指标生成，还需要安装语义层适配器：</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>datus-semantic-metricflow
 </span></code></pre></div>
@@ -3969,11 +3970,11 @@
 <li>步骤 3：<code>output</code> 节点格式化并将结果写入本地磁盘</li>
 </ul>
 <p>关键区别在于 <code>datus_schools_context</code> 可以访问 <code>context_search_tools</code>，使其能够利用您在之前步骤中构建的<a href="../../knowledge_base/metrics/">指标</a>和<a href="../../knowledge_base/reference_sql/">参考 SQL</a>。</p>
-<p>您现在可以：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>/datus_schools &lt;你的问题&gt;
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>/datus_schools_context &lt;你的问题&gt;
+<p>现在可以在 CLI 内切换到任一 subagent 提问：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>/agent datus_schools           # 切换后,在下一行直接输入问题
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>/agent datus_schools_context   # 同上
 </span></code></pre></div>
-<p>或使用 <a href="../../web_chatbot/introduction/">Datus-Chat</a> 中的聊天机器人。</p>
+<p><code>/agent &lt;name&gt;</code> 会把后续自然语言对话的默认 agent 切到对应 subagent。切换完成后直接输入问题（不带任何前缀）即可。也可以在 <a href="../../web_chatbot/introduction/">Datus-Chat</a> 中调用同样的 subagent。</p>
 <h2 id="3-subagent">3. 比较 Subagent 性能<a class="headerlink" href="#3-subagent" title="Permanent link">&para;</a></h2>
 <p>这是教程的关键部分：比较**无上下文** agent 与**上下文丰富** agent。</p>
 <h3 id="31-datus_schools">3.1 评估 <code>datus_schools</code>（基线）<a class="headerlink" href="#31-datus_schools" title="Permanent link">&para;</a></h3>
@@ -3992,7 +3993,7 @@
 <p>通过比较 <code>schools1.txt</code> 和 <code>schools2.txt</code>，您可以明确地看到上下文丰富的 agent 如何提高 SQL 准确性、减少错误并生成更符合语义的查询，相比基线 agent 有显著改进。</p>
 <h2 id="4">4. 多轮基准测试<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p>这是上下文数据工程最强大的演示：</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>python<span class="w"> </span>-m<span class="w"> </span>datus.multi_round_benchmark<span class="w"> </span><span class="se">\</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>datus-agent<span class="w"> </span>multi-round-benchmark<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span>--config<span class="w"> </span>~/.datus/conf/agent.yml<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span>--datasource<span class="w"> </span>california_schools<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span>--benchmark<span class="w"> </span>california_schools<span class="w"> </span><span class="se">\</span>
