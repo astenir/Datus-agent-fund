@@ -72,5 +72,3 @@ build/
 .datus/
 /build_scripts/cache/
 .tmp/
-AGENTS.md
-AGENT.md
